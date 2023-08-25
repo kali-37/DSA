@@ -18,7 +18,7 @@ typedef struct {
 } stack;
 
 stack* initializeStack(char* holder) {
-  stack* stack = malloc(sizeof(stack));
+  stack* stack;
   stack->top = -1;
   stack->stack = malloc(sizeof(char) * strlen(holder));
   stack->profix = malloc(sizeof(char) * strlen(holder));
@@ -67,8 +67,8 @@ char* infix_to_postfix(stack* stack) {
     if (stack->holder[i] == ' ' || stack->holder[i] == '\t') {
       continue;
     }
-	 else if ((stack->holder[i] >= 'a' && stack->holder[i] <= 'z') ||
-               (stack->holder[i] >= 'A' && stack->holder[i] <= 'Z') ||
+	  else if((   stack->holder[i] >= 'a' && stack->holder[i] <= 'z') ||
+            (stack->holder[i] >= 'A' && stack->holder[i] <= 'Z') ||
                (stack->holder[i] >= '0' && stack->holder[i] <= '9')) {
       stack->profix[j++] = stack->holder[i];
     } else if (stack->holder[i] == ')') {
