@@ -43,6 +43,10 @@ bool  isValid(char * argv){
 }
 
 int main(int argc,char* argv[]){
+    if (argc!=2){
+        printf("Please enter the string in the format of \"(){}[]\" \n");
+        return 1;
+    }
     printf("The final answer is TRUE OR FALSe i.e 1 or 0    ::  %d",isValid(argv[1]));
     return 0;
 }
