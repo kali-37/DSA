@@ -7,4 +7,4 @@ class TreeNode:
 class Solution:
     def preorderTraversal(self, root) -> List[int]:
    
-     sdf 
+     sdf sdfe
