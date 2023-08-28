@@ -6,5 +6,4 @@ class TreeNode:
         self.right = right
 class Solution:
     def preorderTraversal(self, root) -> List[int]:
-   
-     sdf sdfe
+    
