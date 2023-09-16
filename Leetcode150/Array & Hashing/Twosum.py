@@ -19,12 +19,12 @@ space complexity of this problem is O(1)
 
         hashmap={}
         for i,j in enumerate(nums):
-            if  not target-j in hashmap: 
-                hashmap[j]=i
-            else:
+            if target-j in hashmap: 
                 return [hashmap[target-j],i] 
+            hashmap[j]=i
+
 
 solver=Solution()
-print(solver.twoSum([1,2,3,4,5,6,7,8,9],18))
+print(solver.twoSum([1,2,3,4,5,6,7,8,9],8))
 
 
