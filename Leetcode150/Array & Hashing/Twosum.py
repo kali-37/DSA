@@ -13,7 +13,9 @@ Time complexity of this problem is O(n^2)
 space complexity of this problem is O(1) 
 
 '''
-# using hashmap 
+# using hashmap , actually hashmap creates a memory of the value and index of the value
+# so that we don't have to travelsal up and down to find the value and index of the value
+# so it's time complexity is O(n) and space complexity is O(n)
 
         hashmap={}
         for i,j in enumerate(nums):
