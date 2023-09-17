@@ -24,7 +24,7 @@
 class Solution:
     def topKFrequent(self, nums: list[int], k: int) -> list[int]:
         dicter={}
-        lister=[[] for i in range(len(nums)-1)] 
+        lister=[[] for i in range(len(nums)+1)] 
         for i in nums:
             dicter[i]=1+dicter.get(i,0)
         
@@ -40,4 +40,4 @@ class Solution:
 
 
 solver=Solution()
-print(solver.topKFrequent([1,2,3,4,1,1,2,1,2,11,23,23,234,32,1,12,123,123,12,213,123,123,123,123],3) )
+print(solver.topKFrequent([1,1,1,2,2,3],2) )
