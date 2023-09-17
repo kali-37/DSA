@@ -1,15 +1,31 @@
 import time
-
+from collections import defaultdict
 class Solution:
     def groupAnagrams(self,strs:list[str])->list[list[str]]:
-        dicter={}
-        for i in strs:
-            sortedword="".join(sorted(i))
-            if sortedword not in dicter:
-                dicter[sortedword]=[i]
-            else:
-                dicter[sortedword].append(i)
-        return list(dicter.values())
+        res=defaultdict(list) 
+        for s in strs:
+            count=[0]*26
+            # print(count)
+            for c in s:
+                count[ord(c) -ord("a")]+=1
+            res[tuple(count)].append(s)
+        return list(res.values())
+
+
+# import time
+# from collections import defaultdict
+# class Solution:
+#     def groupAnagrams(self,strs:list[str])->list[list[str]]:
+#         res=defaultdict(list) 
+#         for s in strs:
+#             count=[0]*26
+#             # print(count)
+#             for c in s:
+#                 count[ord(c) -ord("a")]+=1
+#             res[tuple(count)].append(s)
+#         return list(res.values())
+            
+
         
 solver=Solution()
 print(solver.groupAnagrams(["mango","tango","ognam","gvaua","guava","ganom"]))
