@@ -3,10 +3,10 @@
 class Solution:
     def isAnagram(self,s:str,t:str)->bool:
 
-      #   return sorted(s)==sorted(t)  # Solution 1  is perfect solution for this 
-      #   return counter(s)==counter(t)  # Solution 2  is same as Hashmap but more efficent because it's builtin hashmap like 
+      #   return sorted(s)==sorted(t)  # Solution 1 uses time complexity of O(nlogn) because of sorting
+      #   return counter(s)==counter(t)  # Solution 2  uses time complexity of O(n) and space complexity of O(n)
 
-       # Using Hashmap regural using dict,  
+       # Using Hashmap regular using dict,  is same to counter above but uses more lines to right.
         if len(s)!=len(t):  
             return False 
         dictS,dictT={},{} 
