@@ -3,7 +3,7 @@
 
 
 class Solution:
-    def isPalindrome(self, s: str) -> bool:
+    def isPalindrome(self, ser: str) -> bool:
        # return reversed(s)==s     MUST EASY SOLUTION BUT >> 
         ser=[]
        # let's use two pointers .. and go after it . 
@@ -11,17 +11,16 @@ class Solution:
             if se.isalnum():
                 ser.append(se.lower())
         front,rear=0,len(ser)-1
+        if (ser==[]):
+            return True
+
         while(ser[front]==ser[rear]):
                 if (rear<=front):        
                     return True 
                 front+=1
                 rear-=1
-
         return False
 
 
-
-
 solver=Solution()
-print(solver.isPalindrome("A man, a plan, a canal: Panama"
-))
+print(solver.isPalindrome(" "))
