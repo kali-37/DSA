@@ -24,6 +24,22 @@
 
 
 
+
+
+# from neetcode.io:
+
+class Solution:
+    def longestConsecutive(self, nums: list[int]) -> int:
+        nums=set(nums)
+        longest=0
+        for n in nums:
+            if(n-1) not  in  nums: 
+                length=0
+                while(n+length) in nums:
+                    length+=1
+                longest=max(longest,length)
+        return longest
+
 solver=Solution()
-print(solver.longestConsecutive([]))
+print(solver.longestConsecutive([1]))
         
