@@ -3,20 +3,20 @@
 
 class Solution:
     def maxArea(self, height: list[int]) -> int:
-        pointerR=len(height)-1
+        pointerL,pointerR=0,len(height)-1
         res=0
-        odd_even_checker=0
-        while(pointerR>0):
-            pointerL=0
-            while(height[pointerL]<height[pointerR]):
-                if(height[pointerL]<height[pointerR]):
-                    res=max(res,height[pointerL]*height[pointerL])
-                else:
-                    res=max(res,height[pointerR]*height[pointerR])
+        while(pointerL<pointerR):
+            high=height[pointerR]-height[pointerL] 
+            print("HIGH",high)
+            if(high <0):
+                res=max(res,height[pointerR]*(pointerR-pointerL))
+                pointerR-=1
+            else:
+                res=max(res,height[pointerL]*(pointerR-pointerL))
                 pointerL+=1
-            pointerR-=1
+            print("RES",res)
         return res
 
 
 solver=Solution()
-print(solver.maxArea([99,10000,1,2]))
+print(solver.maxArea([1,1,4]))
