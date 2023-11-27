@@ -23,14 +23,18 @@ void heapify(type A[], int n, int i) {
     int l = 2 * i + 1;
     int r = 2 * i + 2;
 
+    printf("%d r is    and i is %d   , ... %d\n\n ",r, i, A[l]); 
     if (l < n && A[l] > A[largest]) {
+        printf("left vitra \n\n");
         largest = l;
     }
     if (r < n && A[r] > A[largest]) {
+        printf("right vitrra;>>>\n"); 
         largest = r;
     }
 
     if (largest != i) {
+        printf("largest not equal to i \n  ");
         swap(A, largest, i);
         heapify(A, n, largest);
     }
@@ -47,13 +51,14 @@ void printType(type A[], int size) {
 
 
 int main() {
-    type A[] = {23, 34, 5, 3, 56, 0, 2, 34, 3333, 1};
+    type A[] = {23, 34, 5, 3, 56, 0, 2, 34, 3333,1};
     int n = sizeof(A) / sizeof(A[0]);
     printf("Before sorting:\n");
     printType(A, n);
 
     // Build max heap
     for (int i = (n / 2) - 1; i >= 0; i--) {
+        printf("%d n is \n ",n); 
         heapify(A, n, i);
     }
 
@@ -68,3 +73,5 @@ int main() {
 
     return 0;
 }
+
+

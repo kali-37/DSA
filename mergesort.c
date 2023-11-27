@@ -109,3 +109,16 @@ int main(){
   printArray(A,arr_size);
   return 0;
 }
+
+
+
+
+
+// List of sorting algorithms with divide and conquer strategy are as below : 
+// 1. Merge Sort
+// 2. Quick Sort
+// 3. Heap Sort
+// 4. Binary Tree Sort
+// 5. Shell Sort
+// 6. Radix Sort
+// 7. Bucket Sort
